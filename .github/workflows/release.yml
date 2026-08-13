@@ -114,7 +114,7 @@ jobs:
 
       - name: Attest build provenance
         if: ${{ github.repository_visibility == 'public' }}
-        uses: actions/attest-build-provenance@v3
+        uses: actions/attest-build-provenance@v4
         with:
           subject-path: |
             dist/mediafetch-${{ env.RELEASE_VERSION }}-chromium.zip
