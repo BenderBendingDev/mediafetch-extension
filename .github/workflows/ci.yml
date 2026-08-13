@@ -21,16 +21,16 @@ jobs:
 
     steps:
       - name: Check out source
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
         with:
           version: 11.21.0
           run_install: false
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: pnpm
@@ -66,16 +66,17 @@ jobs:
         run: pnpm audit --prod --audit-level=high
 
       - name: Upload Chromium ZIP
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: mediafetch-chromium-${{ github.sha }}
           path: .output/*-chrome.zip
+          include-hidden-files: true
           if-no-files-found: error
           retention-days: 14
 
       - name: Upload Playwright diagnostics
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: playwright-diagnostics-${{ github.sha }}
           path: |
