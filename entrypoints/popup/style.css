@@ -1,0 +1,13 @@
+@import "../../src/ui/theme.css";
+
+html,
+body,
+#root {
+  width: 390px;
+  min-height: 580px;
+  overflow-x: hidden;
+}
+
+body {
+  background: #f7f8fc;
+}

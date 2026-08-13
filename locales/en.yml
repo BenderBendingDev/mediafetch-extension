@@ -1,0 +1,19 @@
+appName:
+  message: MediaFetch
+appDescription:
+  message:
+    Detect, organize, and download authorized media with local processing.
+openDashboard:
+  message: Open dashboard
+scan:
+  message: Scan page
+queue:
+  message: Queue
+history:
+  message: History
+settings:
+  message: Settings
+legalNotice:
+  message:
+    Only download your own content, public-domain content, or content you have
+    permission to use.

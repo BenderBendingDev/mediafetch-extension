@@ -1,0 +1,37 @@
+MediaFetch third-party notices
+==============================
+
+This combined extension is NOT wholly MIT-licensed.
+
+Bundled FFmpeg WebAssembly packages:
+
+* @ffmpeg/core 0.12.10 — package-declared license GPL-2.0-or-later
+* @ffmpeg/ffmpeg 0.12.15 — MIT
+* @ffmpeg/util 0.12.2 — MIT
+
+The JavaScript wrapper's MIT license does not override the WASM core's
+GPL-2.0-or-later declaration.
+
+Upstream: https://github.com/ffmpegwasm/ffmpeg.wasm
+Core 0.12.10 release commit:
+https://github.com/ffmpegwasm/ffmpeg.wasm/commit/71aa99d37c02a7b4c435275ca9ef50e612f6efa1
+GPL-2.0 text:
+https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
+
+The upstream v0.12.10 tag resolves exactly to
+c3a763857c5e615ae8674715ad5e4f63ff469e9d, but it paired the wrapper 0.12.10
+with core 0.12.6 and is not the source revision for bundled core 0.12.10:
+https://github.com/ffmpegwasm/ffmpeg.wasm/commit/c3a763857c5e615ae8674715ad5e4f63ff469e9d
+
+MediaFetch releases attach the corresponding upstream source archive as
+ffmpeg.wasm-core-0.12.10-source.tar.gz and the exact historical v0.12.10 tag
+archive as ffmpeg.wasm-v0.12.10-source.tar.gz.
+
+Other direct runtime dependencies:
+
+* React / React DOM — MIT
+* idb — ISC
+* Lucide React — ISC
+* Zod — MIT
+
+See the release SBOM and repository THIRD_PARTY_NOTICES.md for more detail.

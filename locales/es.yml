@@ -1,0 +1,19 @@
+appName:
+  message: MediaFetch
+appDescription:
+  message:
+    Detecta, organiza y descarga medios autorizados con procesamiento local.
+openDashboard:
+  message: Abrir panel
+scan:
+  message: Escanear página
+queue:
+  message: Cola
+history:
+  message: Historial
+settings:
+  message: Ajustes
+legalNotice:
+  message:
+    Descarga únicamente contenido propio, de dominio público o para el que
+    tengas permiso.

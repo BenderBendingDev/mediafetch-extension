@@ -1,0 +1,61 @@
+{
+  "name": "mediafetch-extension",
+  "description": "Descarga y procesa localmente medios autorizados desde navegadores Chromium.",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "pnpm@11.21.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "wxt",
+    "build": "wxt build",
+    "zip": "wxt zip",
+    "typecheck": "node node_modules/typescript-native/bin/tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "corepack pnpm build && playwright test",
+    "test:e2e:ci": "playwright test",
+    "audit": "corepack pnpm audit --prod --audit-level=high",
+    "check": "corepack pnpm lint && corepack pnpm format:check && corepack pnpm typecheck && corepack pnpm test && corepack pnpm build",
+    "ci": "corepack pnpm check && corepack pnpm test:e2e && corepack pnpm zip && corepack pnpm run audit",
+    "postinstall": "wxt prepare"
+  },
+  "dependencies": {
+    "@ffmpeg/core": "^0.12.10",
+    "@ffmpeg/ffmpeg": "^0.12.15",
+    "@ffmpeg/util": "^0.12.2",
+    "idb": "^8.0.3",
+    "lucide-react": "^1.31.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.62.1",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@typescript-eslint/eslint-plugin": "^8.67.0",
+    "@typescript-eslint/parser": "^8.67.0",
+    "@wxt-dev/module-react": "^1.2.2",
+    "eslint": "^10.8.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "fake-indexeddb": "^6.2.5",
+    "globals": "^17.11.0",
+    "jsdom": "^30.0.1",
+    "prettier": "^3.9.6",
+    "typescript": "6.0.0-beta",
+    "typescript-eslint": "^8.67.0",
+    "typescript-native": "npm:typescript@7.0.2",
+    "vitest": "^4.1.10",
+    "web-ext": "^10.6.0",
+    "wxt": "^0.21.4"
+  }
+}
