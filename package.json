@@ -51,7 +51,7 @@
     "globals": "^17.11.0",
     "jsdom": "^30.0.1",
     "prettier": "^3.9.6",
-    "typescript": "6.0.0-beta",
+    "typescript": "7.0.2",
     "typescript-eslint": "^8.67.0",
     "typescript-native": "npm:typescript@7.0.2",
     "vitest": "^4.1.10",
